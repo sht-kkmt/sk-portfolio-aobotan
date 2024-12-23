@@ -129,6 +129,8 @@ a {
   border-radius: 10px;
   padding: 22px 82px;
   position: relative;
+  @include mq("md") {
+  }
 }
 
 .readmore-btn::after {
@@ -759,6 +761,9 @@ about
 
 .about__text {
   padding-bottom: 32px;
+  @include mq("md") {
+    width: 429px;
+  }
 }
 
 /*-------------------------------
@@ -935,10 +940,12 @@ service
 }
 
 .readmore-btn {
+  display: inline-block;
   margin-top: 28px;
   margin-bottom: 50px;
   @include mq("sm") {
     margin-bottom: 0;
+    margin-top: 40px;
   }
 }
 
