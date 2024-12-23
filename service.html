@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Kaku+Gothic+New&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="icon.png" />
+    <!-- 48x48px -->
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>
+      青牡丹工務店 | 大阪市北区の住宅建築・リフォーム・公共事業なら青牡丹工務店
+    </title>
+    <meta
+      name="description"
+      content="大阪府大阪市に拠点をおく青牡丹工務店は、丁寧な家造りで理想を現実にします。住宅建築からリフォームまで、高品質なサービスと経験豊富なスタッフがお客様のニーズに応えます。お気軽にご相談ください。"
+    />
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- サイドバーここから -->
+      <div class="wrap__side">
+        <div class="sidebar__container">
+          <div class="sidebar__inner">
+            <div class="top__logo">
+              <a href="index.html"
+                ><img src="images/common/logo-pc.svg" alt="青牡丹工務店"
+              /></a>
+            </div>
+            <div class="sidebar__contents">
+              <div class="sidebar__drawer" id="js-accordion">
+                <div class="sidebar__heading">
+                  <a href="about.html">私たちについて</a>
+                </div>
+                <ul class="sidebar__items">
+                  <li class="sidebar__item">
+                    <a href="about.html #philosophy">経営理念</a>
+                  </li>
+                  <li class="sidebar__item">
+                    <a href="about.html #company">会社概要</a>
+                  </li>
+                  <li class="sidebar__item">
+                    <a href="about.html #safety">安全への取り組み</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="sidebar__drawer" id="js-accordion">
+                <div class="sidebar__heading">
+                  <a href="service.html">事業内容</a>
+                </div>
+                <ul class="sidebar__items">
+                  <li class="sidebar__item">
+                    <a href="service.html #housing">住宅建築・リフォーム</a>
+                  </li>
+                  <li class="sidebar__item">
+                    <a href="service.html #corporation">法人新築・リフォーム</a>
+                  </li>
+                  <li class="sidebar__item">
+                    <a href="service.html #public-works">公共工事</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="sidebar__heading">
+                <a href="index.html#news">お知らせ</a>
+              </div>
+              <div class="sidebar__heading">
+                <a href="contact.html">
+                  <img
+                    class="mail-icon sidebar__mail-icon"
+                    src="images/common/mail-icon.svg"
+                    alt=""
+                  />お問い合わせ
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- サイドバーここまで -->
+
+      <div class="wrap__main">
+        <!-- ヘッダーここから -->
+        <header class="header hidden-pc">
+          <div class="header__inner">
+            <a href="#">
+              <img
+                class="header__logo"
+                src="images/common/logo-sp.svg"
+                alt="青牡丹工務店"
+              />
+            </a>
+            <div class="burger">
+              <div id="js-btn-menu" class="btn-menu">
+                <span class="line line__top"></span
+                ><span class="line line__middle"></span
+                ><span class="line line__bottom"></span>
+              </div>
+              <div id="js-contentArea" class="js-contentArea">
+                <ul class="js-nav__list">
+                  <li id="js-nav" class="js-nav__item">
+                    <a href="">トップページ</a>
+                  </li>
+                  <li id="js-nav" class="js-nav__item">
+                    <a href="about.html">私たちについて</a>
+                  </li>
+                  <li id="js-nav" class="js-nav__item">
+                    <a href="about.html #company">会社概要</a>
+                  </li>
+                  <li id="js-nav" class="js-nav__item">
+                    <a href="about.html #company">代表挨拶</a>
+                  </li>
+                  <li id="js-nav" class="js-nav__item">
+                    <a href="about.html #safety">安全への取り組み</a>
+                  </li>
+                  <li id="js-nav" class="js-nav__item">
+                    <a href="service.html">事業内容</a>
+                  </li>
+                  <li id="js-nav" class="js-nav__item">
+                    <a href="service.html #housing">住宅建築・リフォーム</a>
+                  </li>
+                  <li id="js-nav" class="js-nav__item">
+                    <a href="service.html #corporation">法人新築・リフォーム</a>
+                  </li>
+                  <li id="js-nav" class="js-nav__item">
+                    <a href="service.html #public-works">公共工事</a>
+                  </li>
+                  <li id="js-nav" class="js-nav__item">
+                    <a href="index.html #news">お知らせ</a>
+                  </li>
+                  <li id="js-nav" class="js-nav__item">
+                    <a href="contact.html"
+                      ><img
+                        class="menu__mail-icon"
+                        src="images/common/mail-icon.svg"
+                        alt=""
+                      />お問い合わせ</a
+                    >
+                  </li>
+                </ul>
+                <div class="copyright header__copyright">
+                  &copy;AOBOTAN INC.
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <!-- ヘッダーここまで -->
+
+        <!-- service fvここから -->
+        <div class="servicepage-fv__wrapper">
+          <img src="images/service/service-fv.jpg" alt="" />
+        </div>
+        <!-- service fvここまで -->
+
+        <!-- 事業内容 -->
+        <section class="servicepage servicepage-container">
+          <div class="servicepage-top__inner">
+            <h2 class="page-heading2 service__h2">事業内容</h2>
+            <p class="service__toptext">
+              青牡丹工務店は、「住宅建築・リフォーム」<br
+                class="hidden-mobile"
+              />
+              「方針新築・リフォーム」「公共工事」の3つを事業の柱としています。<br />ここではそれぞれご紹介します。
+            </p>
+            <ul class="page__btn-list">
+              <li class="page__btn-item">
+                <a href="#housing" class="page-button">住宅建築・リフォーム</a>
+              </li>
+              <li class="page__btn-item">
+                <a href="#corporation" class="page-button"
+                  >法人新築・リフォーム</a
+                >
+              </li>
+              <li class="page__btn-item">
+                <a href="#public-works" class="page-button">公共工事</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- 事業内容　ここまで-->
+
+        <!-- 各事業内容 -->
+
+        <section class="service__housing" id="philosophy">
+          <!-- 住宅建築・リフォーム -->
+          <div class="servicepage-img">
+            <img src="images/service/works1.jpg" alt="" />
+          </div>
+          <div class="servicepage-container">
+            <div class="servicepage__inner">
+              <h4 class="page-heading4 service__h4" id="housing">
+                住宅建築・リフォーム
+              </h4>
+              <div class="service__examplebox">
+                <p class="service__text-bold">
+                  当社の住宅建築・リフォーム事業では、お客様の夢や理想を具現化するためのサービスを提供しています。
+                </p>
+                <p class="service__text-thin">
+                  新しい家を建てる際には、お客様のニーズや希望を理解し、オーダーメイドの住宅を設計・施工します。
+                  また、古くなったり、機能性が低下したりした建物を、新しい価値ある空間へと再生するリフォームサービスを提供しています。お客様のライフスタイルやニーズに合わせて、効率的かつリーズナブルなリフォームプランをご提案し、品質に妥協することなく施工いたします。
+                </p>
+                <div class="service__example-1">
+                  <div class="service__example-title">
+                    芦屋（兵庫県）のコテージ付き住宅
+                  </div>
+                  <div class="service__example-img">
+                    <img src="images/service/jirei01.jpg" alt="" />
+                  </div>
+                  <div class="service__example-date">
+                    施工年月：R2年2月 構造：S造
+                  </div>
+                </div>
+                <div class="service__example-2">
+                  <div class="service__example-title">
+                    鷹峯（京都府京都市）のモダン和風住宅
+                  </div>
+                  <div class="service__example-img">
+                    <img src="images/service/jirei02.jpg" alt="" />
+                  </div>
+                  <div class="service__example-date">
+                    施工年月：R4年4月 構造：木造
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 住宅建築・リフォーム　ここまで -->
+
+          <!-- 法人新築・リフォーム -->
+          <div class="servicepage-img">
+            <img src="images/service/works2.jpg" alt="" />
+          </div>
+          <div class="servicepage-container">
+            <div class="servicepage__inner">
+              <h4 class="page-heading4 service__h4" id="corporation">
+                法人新築・リフォーム
+              </h4>
+              <div class="service__examplebox">
+                <p class="service__text-bold">
+                  当社の法人新築・リフォームサービスでは、商業施設やオフィスビル、工場など、法人向けの建物の新築や改修を手がけています。
+                </p>
+                <p class="service__text-thin">
+                  既存の商業施設やオフィス、工場などの建物を改修し、最新のビジネスニーズに適した空間へと生まれ変わらせます。設備の更新やレイアウトの見直し、外装や内装のリニューアルなど、お客様の要望に応じたリフォームプランを提案し、スムーズな工事を実施します。
+                </p>
+                <div class="service__example-1">
+                  <div class="service__example-title">
+                    株式会社kaminari station
+                  </div>
+                  <div class="service__example-img">
+                    <img src="images/service/jirei03.jpg" alt="" />
+                  </div>
+                  <div class="service__example-date">
+                    施工年月：H25年4月 構造：S造
+                  </div>
+                </div>
+                <div class="service__example-2">
+                  <div class="service__example-title">鯉登陸運(株)</div>
+                  <div class="service__example-img">
+                    <img src="images/service/jirei04.jpg" alt="" />
+                  </div>
+                  <div class="service__example-date">
+                    施工年月：R4年3月 構造：S造
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 法人新築・リフォーム ここまで-->
+
+          <!--公共工事  -->
+          <div class="servicepage-img">
+            <img src="images/service/works3.jpg" alt="" />
+          </div>
+          <div class="servicepage-container">
+            <div class="servicepage__inner">
+              <h4 class="page-heading4 service__h4" id="public-works">
+                公共工事
+              </h4>
+              <div class="service__examplebox">
+                <p class="service__text-bold">
+                  公共工事事業は、道路や橋梁、公共施設などの建設・改修を行う事業です。
+                </p>
+                <p class="service__text-thin">
+                  公共工事事業は、地域社会の発展や住民の生活に密接に関わる重要な事業です。政府や自治体からの発注が多く、厳しい品質基準や工期管理が求められます。当社では、経験豊富な専門家がチームを組み、最新の技術とノウハウを駆使して、安全で信頼性の高い公共施設の建設に貢献しています。
+                </p>
+                <div class="service__example-1">
+                  <div class="service__example-title">
+                    神戸市立真島小学校　内装工事
+                  </div>
+                  <div class="service__example-img">
+                    <img src="images/service/jirei05.jpg" alt="" />
+                  </div>
+                  <div class="service__example-date">
+                    施工年月：R1年3月 構造：S造
+                  </div>
+                </div>
+                <div class="service__example-2">
+                  <div class="service__example-title">枚方市立暮方郵便局</div>
+                  <div class="service__example-img">
+                    <img src="images/service/jirei06.jpg" alt="" />
+                  </div>
+                  <div class="service__example-date">
+                    施工年月：R4年4月 構造：木造
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--公共工事  ここまで-->
+        </section>
+        <!-- 各事業内容 -->
+
+        <!-- お問い合わせここから -->
+        <section class="contact">
+          <div class="contact__container container">
+            <h2 class="service__heading heading">お問い合わせ</h2>
+            <div class="service___heading-en heading-en">CONTACT</div>
+            <div class="contact__inner">
+              <div class="contact__tel-head">
+                <div class="contact__tel-en">Tel</div>
+                <div class="contact__tel-ja">電話</div>
+              </div>
+              <div class="contact__numbers">
+                <div class="contact__tel-number">0000-000-0000</div>
+                <div class="contact__business-hours">営業時間10:00-20:00</div>
+              </div>
+              <button class="mail-form-btn">
+                <img
+                  class="mail-icon contact__mail-icon"
+                  src="images/common/mail-icon.svg"
+                  alt=""
+                />メールフォームはこちら
+              </button>
+            </div>
+          </div>
+        </section>
+        <!-- お問い合わせここまで -->
+
+        <!-- footerここから -->
+        <footer class="footer">
+          <footer class="footer__container container">
+            <div class="footer__inner">
+              <div class="footer__pc-leftside">
+                <div class="footer__logo">
+                  <img src="images/common/logo-pc.svg" alt="青牡丹工務店" />
+                </div>
+                <div class="footer__company-info">
+                  <div class="footer__address-set">
+                    <div class="footer__post-number">〒000-0000</div>
+                    <div class="footer__address">
+                      大阪府大阪市中央区北区南町5-6-7
+                    </div>
+                  </div>
+                  <div class="footer__business-hours-set">
+                    <div class="footer__business-hours-head">営業時間</div>
+                    <div class="footer__business-hours">10:00~20:00</div>
+                  </div>
+                  <div class="footer__regular-holidays-set">
+                    <div class="footer__regular-holidays-head">定休日</div>
+                    <div class="footer__regular-holidays">
+                      日曜日、祝日、年末年始（12月31日から1月3日まで）
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="footer__pc-rightside">
+                <div class="footer__sitemap">
+                  <ui class="footer__sitemap-list footer__sitemap-row">
+                    <li class="footer__sitemap-item">
+                      <a href="#">トップページ</a>
+                    </li>
+                    <li class="footer__sitemap-item">
+                      <a href="about.html">私たちについて</a>
+                    </li>
+                    <li class="footer__sitemap-item">
+                      <a href="about.html #company">会社概要</a>
+                    </li>
+                  </ui>
+                  <ui class="footer__sitemap-list footer__sitemap-row">
+                    <li class="footer__sitemap-item">
+                      <a href="about.html #company">代表挨拶</a>
+                    </li>
+                    <li class="footer__sitemap-item">
+                      <a href="about.html #safety">安全への取り組み</a>
+                    </li>
+                    <li class="footer__sitemap-item">
+                      <a href="service.html">事業内容</a>
+                    </li>
+                    <li class="footer__sitemap-item">
+                      <a href="service.html #housing">住宅建築・リフォーム</a>
+                    </li>
+                  </ui>
+                  <ui class="footer__sitemap-list footer__sitemap-row">
+                    <li class="footer__sitemap-item">
+                      <a href="about.html #corporation">法人新築・リフォーム</a>
+                    </li>
+                    <li class="footer__sitemap-item">
+                      <a href="service.html #public-works">公共工事</a>
+                    </li>
+                    <li class="footer__sitemap-item">
+                      <a href="index.html#news">お知らせ</a>
+                    </li>
+                    <li class="footer__sitemap-item">
+                      <img
+                        class="mail-icon"
+                        src="images/common/mail-icon.svg"
+                        alt=""
+                      /><a href="contact.html">お問い合わせ</a>
+                    </li>
+                  </ui>
+                </div>
+              </div>
+            </div>
+            <div class="footer__copyright">&copy;AOBOTAN INC.</div>
+          </footer>
+        </footer>
+        <!-- footerここまで -->
+      </div>
+      <!-- wrap__mainここまで -->
+    </div>
+    <!--↑全体を囲んでいるwrapの閉じタグ-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/micromodal/dist/micromodal.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
