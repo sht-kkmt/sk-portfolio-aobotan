@@ -25,6 +25,10 @@ img {
   width: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
 .menu__mail-icon {
   width: 20px;
   padding-right: 8px;
