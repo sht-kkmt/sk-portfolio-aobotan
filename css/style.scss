@@ -694,6 +694,7 @@ a {
 }
 
 .gallery__textbox {
+  -webkit-appearance: none;
   background-color: #f8f8f8;
   font-size: clamp(1.5rem, 1.148rem + 1.5vw, 2.5rem);
   font-weight: 700;
@@ -703,10 +704,23 @@ a {
   position: absolute;
   top: clamp(7.25rem, 4.213rem + 12.96vw, 15.875rem);
   right: clamp(1.688rem, -1.724rem + 14.55vw, 11.375rem);
+  // right: 27px;
   z-index: 50;
-  // width: clamp(7rem, 5.68rem + 5.63vw, 10.75rem);
-  // height: clamp(17.75rem, 14.053rem + 15.77vw, 28.25rem);
-  // overflow: visible;
+  // @include mq("sm") {
+  //   right: 36px;
+  // }
+  // @include mq("md") {
+  //   right: 72px;
+  // }
+  // @include mq("lg") {
+  //   right: 72px;
+  // }
+  // @media screen and (min-width: 1500px) {
+  //   right: 120px;
+  // }
+  // @include mq("xl") {
+  //   right: 182px;
+  // }
 }
 
 .gallery__text {
