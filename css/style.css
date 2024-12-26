@@ -21,6 +21,13 @@ body {
   background-color: #fff;
 }
 
+.body-no-scroll {
+  overflow: hidden;
+  height: 100vh; /* ビューポートの高さを固定 */
+  position: fixed; /* ページ全体を固定 */
+  width: 100%; /* 横スクロールも防止 */
+}
+
 img {
   width: 100%;
 }
@@ -242,7 +249,7 @@ a {
   top: 0;
   transform: translateY(100%);
   background-color: #fff;
-  z-index: 8;
+  z-index: 9999;
   transition: transform 0.2s linear;
   margin-top: 92px;
 }
