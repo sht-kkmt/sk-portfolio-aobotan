@@ -1,6 +1,11 @@
 /*-----------------------------------
 初回のみローディング
 -----------------------------------*/
+/*
+  このスクリプトは、初回アクセス時にローディングアニメーションを表示し、3秒後に非表示にします。
+  2回目以降のアクセス時には、ローディングアニメーションをスキップして、通常画面を表示します。
+  sessionStorageを使用して、ユーザーが初回アクセスかどうかを判断します。
+*/
 $(function () {
   var webStorage = function () {
     if (sessionStorage.getItem("access")) {
@@ -95,63 +100,6 @@ jQuery(function () {
     e.preventDefault(); // デフォルトのスクロール動作を無効化
   };
 });
-
-// /*
-//   このスクリプトの機能：
-//   1. ハンバーガーメニューの展開/非展開をトグルします。
-//      - メニューが展開されると、ボタンとメニュー領域に `is-checked` クラスを付与します。
-//      - クラスの有無で展開状態を制御します。
-//   2. メニュー展開時に背景スクロールを無効化します。
-//      - `body` に `body-no-scroll` クラスを追加して基本的なスクロールを停止します。
-//      - マウスホイールやタッチ操作によるスクロールも防ぎます。
-//   3. メニューを閉じた際にスクロールを再有効化します。
-//   4. ハンバーガーメニュー内のリンクをクリックした際にメニューを閉じます。
-// */
-
-// jQuery(function () {
-//   const $menuButton = jQuery("#js-btn-menu");
-//   const $menuContent = jQuery("#js-contentArea");
-//   const $body = jQuery("body");
-
-//   // ハンバーガーメニューのトグル処理
-//   const toggleMenu = (open) => {
-//     $menuButton.toggleClass("is-checked", open);
-//     $menuContent.toggleClass("is-checked", open);
-//     $body.toggleClass("body-no-scroll", open);
-
-//     if (open) {
-//       disableScroll();
-//     } else {
-//       enableScroll();
-//     }
-//   };
-
-//   // メニューの開閉ボタンクリック時の処理
-//   $menuButton.on("click", function (e) {
-//     e.preventDefault();
-//     toggleMenu(!$menuContent.hasClass("is-checked"));
-//   });
-
-//   // メニュー内のリンクがクリックされたときの処理
-//   $menuContent.find("a").on("click", function () {
-//     toggleMenu(false); // メニューを閉じる
-//   });
-
-//   // マウスホイールとタッチスクロールを無効化する関数
-//   const disableScroll = () => {
-//     jQuery(window).on("scroll mousewheel touchmove", preventDefault);
-//   };
-
-//   // マウスホイールとタッチスクロールを有効化する関数
-//   const enableScroll = () => {
-//     jQuery(window).off("scroll mousewheel touchmove", preventDefault);
-//   };
-
-//   // デフォルトのスクロール動作を防ぐ
-//   const preventDefault = (e) => {
-//     e.preventDefault();
-//   };
-// });
 
 /*-----------------------------------
 トップページfvテキストのフェード
