@@ -27,29 +27,26 @@ $(function () {
 /*-----------------------------------
 SPハンバーガーメニュー
 -----------------------------------*/
-/*
-  このスクリプトの機能：
-  1. ハンバーガーメニューの展開/非展開をトグルします。
-     - メニューが展開されると、ボタンとメニュー領域に `is-checked` クラスを付与します。
-     - クラスの有無で展開状態を制御します。
-  2. メニュー展開時に背景スクロールを無効化します。
-     - `body` に `body-no-scroll` クラスを追加して基本的なスクロールを停止します。
-     - マウスホイールやタッチ操作によるスクロールも防ぎます。
-  3. メニューを閉じた際にスクロールを再有効化します。
-  4. ハンバーガーメニュー内のリンクをクリックした際にメニューを閉じます。
-*/
+// このコードは、ハンバーガーメニューの開閉とリンククリック後のページ遷移を管理します。
+// 1. メニューボタンをクリックすると、メニューが開閉します。
+// 2. メニュー内のリンクをクリックすると、トランジションなしでリンク先に遷移します。
+// 3. メニューが開いているときはスクロールを無効化し、閉じるとスクロールを有効化します。
+// 4. メニュー内のリンククリック時、トランジションを一時的に無効化し、リンク先に遷移します。
 
 jQuery(function () {
   const $menuButton = jQuery("#js-btn-menu");
   const $menuContent = jQuery("#js-contentArea");
   const $body = jQuery("body");
 
-  // ハンバーガーメニューのトグル処理
+  // ハンバーガーメニューの開閉を管理する関数
+  // 引数openに基づいてメニューの表示/非表示を切り替え
   const toggleMenu = (open) => {
+    // メニューボタンとメニューコンテンツの状態を切り替え
     $menuButton.toggleClass("is-checked", open);
     $menuContent.toggleClass("is-checked", open);
-    $body.toggleClass("body-no-scroll", open);
+    $body.toggleClass("body-no-scroll", open); // メニューが開いているときにスクロールを無効化
 
+    // メニューが開く場合はスクロールを無効化、閉じる場合はスクロールを有効化
     if (open) {
       disableScroll();
     } else {
@@ -58,31 +55,103 @@ jQuery(function () {
   };
 
   // メニューの開閉ボタンクリック時の処理
+  // ボタンクリックでメニューの開閉をトグル（切り替え）
   $menuButton.on("click", function (e) {
-    e.preventDefault();
-    toggleMenu(!$menuContent.hasClass("is-checked"));
+    e.preventDefault(); // デフォルトの動作（リンク遷移など）を無効化
+    toggleMenu(!$menuContent.hasClass("is-checked")); // メニューの開閉状態を切り替え
   });
 
   // メニュー内のリンクがクリックされたときの処理
-  $menuContent.find("a").on("click", function () {
-    toggleMenu(false); // メニューを閉じる
+  // トランジションなしでリンク先に遷移する
+  $menuContent.find("a").on("click", function (e) {
+    // メニューのトランジションを一時的に無効化
+    $menuContent.css("transition", "none");
+
+    // メニューを閉じる
+    toggleMenu(false);
+
+    // ページ遷移する前にトランジションなしでリンク先へ遷移
+    setTimeout(
+      function () {
+        window.location = $(this).attr("href"); // クリックされたリンク先に遷移
+      }.bind(this),
+      0
+    ); // クリックイベントが完了してから遷移するように設定
   });
 
-  // マウスホイールとタッチスクロールを無効化する関数
+  // スクロールを無効化する関数
+  // マウスホイールやタッチスクリーンでのスクロールを禁止
   const disableScroll = () => {
-    jQuery(window).on("scroll mousewheel touchmove", preventDefault);
+    jQuery(window).on("scroll mousewheel touchmove", preventDefault); // イベントリスナーを追加
   };
 
-  // マウスホイールとタッチスクロールを有効化する関数
+  // スクロールを有効化する関数
   const enableScroll = () => {
-    jQuery(window).off("scroll mousewheel touchmove", preventDefault);
+    jQuery(window).off("scroll mousewheel touchmove", preventDefault); // イベントリスナーを削除
   };
 
-  // デフォルトのスクロール動作を防ぐ
+  // スクロール動作を防ぐための補助関数
   const preventDefault = (e) => {
-    e.preventDefault();
+    e.preventDefault(); // デフォルトのスクロール動作を無効化
   };
 });
+
+// /*
+//   このスクリプトの機能：
+//   1. ハンバーガーメニューの展開/非展開をトグルします。
+//      - メニューが展開されると、ボタンとメニュー領域に `is-checked` クラスを付与します。
+//      - クラスの有無で展開状態を制御します。
+//   2. メニュー展開時に背景スクロールを無効化します。
+//      - `body` に `body-no-scroll` クラスを追加して基本的なスクロールを停止します。
+//      - マウスホイールやタッチ操作によるスクロールも防ぎます。
+//   3. メニューを閉じた際にスクロールを再有効化します。
+//   4. ハンバーガーメニュー内のリンクをクリックした際にメニューを閉じます。
+// */
+
+// jQuery(function () {
+//   const $menuButton = jQuery("#js-btn-menu");
+//   const $menuContent = jQuery("#js-contentArea");
+//   const $body = jQuery("body");
+
+//   // ハンバーガーメニューのトグル処理
+//   const toggleMenu = (open) => {
+//     $menuButton.toggleClass("is-checked", open);
+//     $menuContent.toggleClass("is-checked", open);
+//     $body.toggleClass("body-no-scroll", open);
+
+//     if (open) {
+//       disableScroll();
+//     } else {
+//       enableScroll();
+//     }
+//   };
+
+//   // メニューの開閉ボタンクリック時の処理
+//   $menuButton.on("click", function (e) {
+//     e.preventDefault();
+//     toggleMenu(!$menuContent.hasClass("is-checked"));
+//   });
+
+//   // メニュー内のリンクがクリックされたときの処理
+//   $menuContent.find("a").on("click", function () {
+//     toggleMenu(false); // メニューを閉じる
+//   });
+
+//   // マウスホイールとタッチスクロールを無効化する関数
+//   const disableScroll = () => {
+//     jQuery(window).on("scroll mousewheel touchmove", preventDefault);
+//   };
+
+//   // マウスホイールとタッチスクロールを有効化する関数
+//   const enableScroll = () => {
+//     jQuery(window).off("scroll mousewheel touchmove", preventDefault);
+//   };
+
+//   // デフォルトのスクロール動作を防ぐ
+//   const preventDefault = (e) => {
+//     e.preventDefault();
+//   };
+// });
 
 /*-----------------------------------
 トップページfvテキストのフェード
