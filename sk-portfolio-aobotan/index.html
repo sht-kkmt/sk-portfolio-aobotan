@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Kaku+Gothic+New&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="icon.png" />
+    <!-- 48x48px -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>
+      青牡丹工務店 | 大阪市北区の住宅建築・リフォーム・公共事業なら青牡丹工務店
+    </title>
+    <meta
+      name="description"
+      content="大阪府大阪市に拠点をおく青牡丹工務店は、丁寧な家造りで理想を現実にします。住宅建築からリフォームまで、高品質なサービスと経験豊富なスタッフがお客様のニーズに応えます。お気軽にご相談ください。"
+    />
+  </head>
+  <body>
+    <!-- ローディング -->
+    <div class="loading">
+      <div class="loading-animation">
+        <div class="loading__hex">
+          <img src="images/common/logo-pc.svg" alt="青牡丹工務店" />
+        </div>
+      </div>
+    </div>
+    <!-- ローディング ここまで-->
+    <div class="wrap">
+      <!-- サイドバーここから -->
+      <div class="wrap__side">
+        <div class="sidebar__container">
+          <div class="sidebar__inner">
+            <div class="top__logo">
+              <a href="index.html"
+                ><img src="images/common/logo-pc.svg" alt="青牡丹工務店"
+              /></a>
+            </div>
+            <div class="sidebar__contents">
+              <div class="sidebar__drawer" id="js-accordion">
+                <div class="sidebar__heading">
+                  <a href="about.html">私たちについて</a>
+                </div>
+                <ul class="sidebar__items">
+                  <li class="sidebar__item">
+                    <a href="about.html#philosophy">経営理念</a>
+                  </li>
+                  <li class="sidebar__item">
+                    <a href="about.html#company">会社概要</a>
+                  </li>
+                  <li class="sidebar__item">
+                    <a href="about.html#safety">安全への取り組み</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="sidebar__drawer" id="js-accordion">
+                <div class="sidebar__heading">
+                  <a href="service.html">事業内容</a>
+                </div>
+                <ul class="sidebar__items">
+                  <li class="sidebar__item">
+                    <a href="service.html#housing">住宅建築・リフォーム</a>
+                  </li>
+                  <li class="sidebar__item">
+                    <a href="service.html#corporation">法人新築・リフォーム</a>
+                  </li>
+                  <li class="sidebar__item">
+                    <a href="service.html#public-works">公共工事</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="sidebar__heading">
+                <a href="index.html#news">お知らせ</a>
+              </div>
+              <div class="sidebar__heading">
+                <a href="contact.html">
+                  <img
+                    class="mail-icon sidebar__mail-icon"
+                    src="images/common/mail-icon.svg"
+                    alt=""
+                  />お問い合わせ</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- サイドバーここまで -->
+
+      <div class="wrap__main">
+        <!-- ヘッダーここから -->
+        <header class="header hidden-pc">
+          <div class="header__inner">
+            <a href="#">
+              <img
+                class="header__logo"
+                src="images/common/logo-sp.svg"
+                alt="青牡丹工務店"
+              />
+            </a>
+            <div class="burger">
+              <div id="js-btn-menu" class="btn-menu">
+                <span class="line line__top"></span
+                ><span class="line line__middle"></span
+                ><span class="line line__bottom"></span>
+              </div>
+              <div id="js-contentArea" class="js-contentArea">
+                <ul class="js-nav__list">
+                  <li id="js-nav" class="js-nav__item">
+                    <a href="">トップページ</a>
+                  </li>
+                  <li id="js-nav" class="js-nav__item">
+                    <a href="about.html">私たちについて</a>
+                  </li>
+                  <li id="js-nav" class="js-nav__item">
+                    <a href="about.html#company">会社概要</a>
+                  </li>
+                  <li id="js-nav" class="js-nav__item">
+                    <a href="about.html#company">代表挨拶</a>
+                  </li>
+                  <li id="js-nav" class="js-nav__item">
+                    <a href="about.html#safety">安全への取り組み</a>
+                  </li>
+                  <li id="js-nav" class="js-nav__item">
+                    <a href="service.html">事業内容</a>
+                  </li>
+                  <li id="js-nav" class="js-nav__item">
+                    <a href="service.html#housing">住宅建築・リフォーム</a>
+                  </li>
+                  <li id="js-nav" class="js-nav__item">
+                    <a href="service.html#corporation">法人新築・リフォーム</a>
+                  </li>
+                  <li id="js-nav" class="js-nav__item">
+                    <a href="service.html#public-works">公共工事</a>
+                  </li>
+                  <li id="js-nav" class="js-nav__item">
+                    <a href="index.html#news">お知らせ</a>
+                  </li>
+                  <li id="js-nav" class="js-nav__item">
+                    <a href="contact.html"
+                      ><img
+                        class="menu__mail-icon"
+                        src="images/common/mail-icon.svg"
+                        alt=""
+                      />お問い合わせ</a
+                    >
+                  </li>
+                </ul>
+                <div class="copyright header__copyright">
+                  &copy;AOBOTAN INC.
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <!-- ヘッダーここまで -->
+
+        <!-- トップページfvここから -->
+        <div class="top-fv__wrapper">
+          <picture class="top__fv">
+            <source
+              media="(max-width:1000px)
+            "
+              srcset="images/index/first-view-sp1.png"
+              class="sp__fv"
+            />
+            <img src="images/index/first-view1.png" alt="" />
+          </picture>
+          <div id="js-box" class="top-fv__textset js-box">
+            <div class="top-fv__title">理想を、カタチに</div>
+            <div class="top-fv__text">
+              住宅購入は一生に一度あるかないかの、大きな買い物です。<br />
+              青牡丹工務店は、最高の家造りを行うスペシャリスト集団です。
+            </div>
+          </div>
+          <!-- <div class="top-fv__scrolldown">scroll down</div> -->
+          <div class="scrollbar scroll-down4"></div>
+        </div>
+        <!-- トップページfvここまで -->
+
+        <!-- ギャラリーここから -->
+        <section class="gallery">
+          <div class="gallery__container">
+            <!-- Slider main container -->
+            <div class="swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <img src="images/index/slide01.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/index/slide02.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/index/slide03.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="gallery__textbox">
+              <div class="gallery__text">
+                <span class="gallery__highlight">丁寧な家造り</span
+                >で<br />理想を現実に
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ギャラリーここまで -->
+        <!-- aboutここから -->
+        <section class="about">
+          <div class="about__container container">
+            <div class="image-icon about__icon"></div>
+            <h2 class="about__heading heading">私たちについて</h2>
+            <div class="about__heading-en heading-en">ABOUT</div>
+            <p class="about__text">
+              「丁寧な家造りで、理想を現実に」。これは私たちの約束です。青牡丹工務店が手がける家は、ただの建物ではありません。それは、お客様の暮らしや夢を支える、信頼と品質に満ちた温かな空間です。
+            </p>
+            <a class="about__readmore readmore-btn" href="about.html"
+              >Read More</a
+            >
+          </div>
+        </section>
+        <!-- aboutここまで -->
+
+        <!-- serviceここから -->
+        <section class="service">
+          <div class="service__cotainer container">
+            <h2 class="service__heading heading">事業内容</h2>
+            <div class="service___heading-en heading-en">SERVICE</div>
+            <div class="service__inner">
+              <div class="service__card">
+                <div class="service__img img-01">
+                  <img src="images/index/house01.jpg" alt="" />
+                </div>
+                <div class="service__card-textbox">
+                  <div class="service__titlebox">
+                    <div class="service__card-title">住宅建築・リフォーム</div>
+                    <div class="service__card-number number-01">01</div>
+                  </div>
+                  <p class="service__card-text">
+                    注文住宅では、お客様のニーズや希望に合わせて、オーダーメイドの家を提供します。私たちは、建物の設計から完成までのプロセスで、お客様と緊密に連携し、理想の暮らしを実現するための最適な解決策を提案します。
+                  </p>
+                  <a class="service__readmore readmore-btn" href="service.html"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+              <div class="service__card">
+                <div class="service__img img-02">
+                  <img src="images/index/house02.jpg" alt="" />
+                </div>
+                <div class="service__card-textbox">
+                  <div class="service__titlebox">
+                    <div class="service__card-title">法人新築・リフォーム</div>
+                    <div class="service__card-number number-02">02</div>
+                  </div>
+                  <p class="service__card-text">
+                    法人新築では、商業施設やオフィスビル、工場など、さまざまなニーズに応じた建物の新築を手がけています。お客様のビジネスの要件やイメージに合わせて、効率的で機能的な建物を設計・施工します。
+                  </p>
+                  <a class="service__readmore readmore-btn" href="service.html"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+              <div class="service__card">
+                <div class="service__img img-03">
+                  <img src="images/index/house03.jpg" alt="" />
+                </div>
+                <div class="service__card-textbox">
+                  <div class="service__titlebox">
+                    <div class="service__card-title">公共工事</div>
+                    <div class="service__card-number number-03">03</div>
+                  </div>
+                  <p class="service__card-text">
+                    公共工事では、道路や橋梁、公共施設など、地域社会に欠かせないインフラや施設の建設・改修を行います。私たちは、公共の福祉と安全を考慮しながら、厳格な規制や基準に適合した施工を行います。
+                  </p>
+                  <a class="service__readmore readmore-btn" href="service.html"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- serviceここまで -->
+        <!-- お知らせここから -->
+        <section class="news" id="news">
+          <div class="news__container container">
+            <h2 class="service__heading heading">お知らせ</h2>
+            <div class="service___heading-en heading-en">NEWS</div>
+            <div class="news__inner">
+              <ul class="news__list">
+                <li class="news__card">
+                  <button
+                    class="modal__btn"
+                    data-micromodal-trigger="modal-1"
+                    role="button"
+                  >
+                    <div class="card__info">
+                      <div class="news__category">イベント情報</div>
+                      <time class="card__date" datetime="2014-01-01"
+                        >2024.06.03</time
+                      >
+                    </div>
+                    <div class="news__item">
+                      住宅設計相談会を実施します。弊社建築士と将来の家造りを真剣に考えませんか？
+                    </div>
+                  </button>
+                </li>
+                <div id="modal-1" aria-hidden="true">
+                  <div
+                    class="modal__overlay"
+                    tabindex="-1"
+                    data-micromodal-close
+                  >
+                    <div
+                      class="modal__container"
+                      role="dialog"
+                      aria-modal="true"
+                      aria-labelledby="modal-1-title"
+                    >
+                      <div class="modal__inner">
+                        <div class="modal__card-info">
+                          <div class="modal__news-category">イベント情報</div>
+                          <time class="modal__card-date" datetime="2014-01-01"
+                            >2024.06.03</time
+                          >
+                        </div>
+                        <div class="modal__heading">
+                          住宅設計相談会を実施します。弊社建築士と将来の家造りを真剣に考えませんか？
+                        </div>
+                        <img
+                          class="modal__img"
+                          src="images/index/news01.jpg"
+                          alt=""
+                        />
+                        <p class="modal__text">
+                          みなさま、こんにちは！弊社では、住宅設計相談会を開催することになりました！将来の家造りを真剣に考える皆様、ぜひご参加ください。<br />
+                          家を建てるというのは、人生の中で最も重要なイベントの一つです。そのためには、慎重な計画と適切なアドバイスが欠かせません。そこで、弊社の建築士が皆様のお悩みやご要望をお聞きし、最適な家づくりの提案をさせていただきます。<br />
+                          住宅設計相談会では、以下のようなことについてご相談いただけます：<br />
+                          <br />
+                        </p>
+                        <ul class="modal__list">
+                          <li>理想の間取りやデザインについて</li>
+                          <li>予算や資金計画の相談</li>
+                          <li>土地選びや法的手続きについてのアドバイス</li>
+                          <li>
+                            新しい住宅技術や省エネルギーの取り入れ方について
+                          </li>
+                        </ul>
+                        <br />
+                        <p>
+                          また、実際の事例やケーススタディを通じて、事故や災害が発生した際の適切な対応方法についても学びました。参加者全員が積極的に議論し、知識を深めることができました。<br />
+                          <br />
+                          安全管理研修を通じて、従業員一人ひとりが安全に対する意識を高め、安全な職場環境の実現に向けて一層の努力をすることを確認しました。今後も定期的に研修を実施し、安全管理の徹底を図ってまいります。
+                        </p>
+                      </div>
+                      <button
+                        class="modal__close"
+                        aria-label="Close modal"
+                        data-micromodal-close
+                      >
+                        閉じる
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <li class="news__card">
+                  <button
+                    class="modal__btn"
+                    data-micromodal-trigger="modal-2"
+                    role="button"
+                  >
+                    <div class="card__info">
+                      <div class="news__category">イベント情報</div>
+                      <time class="card__date" datetime="2014-01-01"
+                        >2024.05.23</time
+                      >
+                    </div>
+                    <div class="news__item">安全管理研修を行いました。</div>
+                  </button>
+                </li>
+                <div id="modal-2" aria-hidden="true">
+                  <div
+                    class="modal__overlay"
+                    tabindex="-1"
+                    data-micromodal-close
+                  >
+                    <div
+                      class="modal__container"
+                      role="dialog"
+                      aria-modal="true"
+                      aria-labelledby="modal-2-title"
+                    >
+                      <div class="modal__inner">
+                        <div class="modal__card-info">
+                          <div class="modal__news-category">イベント情報</div>
+                          <time class="modal__card-date" datetime="2014-01-01"
+                            >2024.05.23</time
+                          >
+                        </div>
+                        <div class="modal__heading">
+                          安全管理研修を行いました。
+                        </div>
+                        <img src="images/index/news02.jpg" alt="" />
+                        <p class="modal__text">
+                          弊社では、従業員の安全意識向上と安全管理の強化を目的として、安全管理研修を実施しました。この研修では、従業員全員が安全な作業環境を確保するための重要性や具体的な対策について学び、より安全な職場づくりに向けた取り組みを行いました。<br />
+                          研修では、以下の内容を中心に学びました：<br />
+                        </p>
+                        <ul class="modal__list">
+                          <li>
+                            作業中の事故や災害を防ぐための基本的な安全ルールや手順
+                          </li>
+                          <li>
+                            安全装置や保護具の正しい使用方法と管理について
+                          </li>
+                          <li>
+                            作業現場での危険予知や事故対応のためのトレーニング
+                          </li>
+                        </ul>
+                        <p class="modal__text">
+                          また、実際の事例やケーススタディを通じて、事故や災害が発生した際の適切な対応方法についても学びました。参加者全員が積極的に議論し、知識を深めることができました。<br />
+                          <br />
+                          安全管理研修を通じて、従業員一人ひとりが安全に対する意識を高め、安全な職場環境の実現に向けて一層の努力をすることを確認しました。今後も定期的に研修を実施し、安全管理の徹底を図ってまいります。
+                        </p>
+                      </div>
+                      <button
+                        class="modal__close"
+                        aria-label="Close modal"
+                        data-micromodal-close
+                      >
+                        閉じる
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <li class="news__card">
+                  <button
+                    class="modal__btn"
+                    data-micromodal-trigger="modal-3"
+                    role="button"
+                  >
+                    <div class="card__info">
+                      <div class="news__category">更新情報</div>
+                      <time class="card__date" datetime="2014-01-01"
+                        >2024.05.01</time
+                      >
+                    </div>
+                    <div class="news__item">
+                      ホームページをリニューアルしました！！
+                    </div>
+                  </button>
+                </li>
+
+                <div id="modal-3" aria-hidden="true">
+                  <div
+                    class="modal__overlay"
+                    tabindex="-1"
+                    data-micromodal-close
+                  >
+                    <div
+                      class="modal__container"
+                      role="dialog"
+                      aria-modal="true"
+                      aria-labelledby="modal-3-title"
+                    >
+                      <div class="modal__inner">
+                        <div class="modal__card-info">
+                          <div class="modal__news-category">イベント情報</div>
+                          <time class="modal__card-date" datetime="2014-01-01"
+                            >2024.06.03</time
+                          >
+                        </div>
+                        <div class="modal__heading">
+                          ホームページをリニューアルしました！！
+                        </div>
+                        <img src="images/index/news03.jpg" alt="" />
+                        <p class="modal__text">
+                          弊社は、お客様により良いサービスを提供するため、ホームページをリニューアルいたしました。新しいデザインと使いやすさを追求し、お客様が情報をより簡単に見つけられるように工夫しました。<br />
+                          新しいホームページでは、以下のような改善点がございます：
+                          <br />
+                        </p>
+                        <ul class="modal__list">
+                          <li>
+                            モダンでスタイリッシュなデザインにより、情報の見やすさと視覚的な魅力を向上
+                          </li>
+                          <li>
+                            より直感的で分かりやすいナビゲーションメニューにより、目的の情報へのアクセスがスムーズになりました
+                          </li>
+                          <li>
+                            より多くの情報やサービスを掲載し、お客様のニーズに合った情報を提供するようになりました
+                          </li>
+                          <li>
+                            モバイルフレンドリーなデザインで、スマートフォンやタブレットからも快適に閲覧できます
+                          </li>
+                        </ul>
+                        <p>
+                          弊社のホームページは、お客様とのコミュニケーションや情報提供の重要なツールです。より使いやすく、わかりやすいホームページを提供することで、お客様との良好な関係を築いていくことが目標です。<br />
+                          <br />
+                          ぜひ、新しいホームページをご覧いただき、お客様のご意見やご要望をお聞かせください。今後もお客様により良いサービスを提供できるよう努めてまいります。
+                        </p>
+                      </div>
+                      <button
+                        class="modal__close"
+                        aria-label="Close modal"
+                        data-micromodal-close
+                      >
+                        閉じる
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- お知らせここまで -->
+
+        <!-- お問い合わせここから -->
+        <section class="contact">
+          <div class="contact__container container">
+            <h2 class="service__heading heading">お問い合わせ</h2>
+            <div class="service___heading-en heading-en">CONTACT</div>
+            <div class="contact__inner">
+              <div class="contact__tel-head">
+                <div class="contact__tel-en">Tel</div>
+                <div class="contact__tel-ja">電話</div>
+              </div>
+              <div class="contact__numbers">
+                <div class="contact__tel-number">0000-000-0000</div>
+                <div class="contact__business-hours">営業時間10:00-20:00</div>
+              </div>
+              <button class="mail-form-btn">
+                <img
+                  class="mail-icon contact__mail-icon"
+                  src="images/common/mail-icon.svg"
+                  alt=""
+                />メールフォームはこちら
+              </button>
+            </div>
+          </div>
+        </section>
+        <!-- お問い合わせここまで -->
+
+        <!-- footerここから -->
+        <footer class="footer">
+          <footer class="footer__container container">
+            <div class="footer__inner">
+              <div class="footer__pc-leftside">
+                <div class="footer__logo">
+                  <img src="images/common/logo-pc.svg" alt="青牡丹工務店" />
+                </div>
+                <div class="footer__company-info">
+                  <div class="footer__address-set">
+                    <div class="footer__post-number">〒000-0000</div>
+                    <div class="footer__address">
+                      大阪府大阪市中央区北区南町5-6-7
+                    </div>
+                  </div>
+                  <div class="footer__business-hours-set">
+                    <div class="footer__business-hours-head">営業時間</div>
+                    <div class="footer__business-hours">10:00~20:00</div>
+                  </div>
+                  <div class="footer__regular-holidays-set">
+                    <div class="footer__regular-holidays-head">定休日</div>
+                    <div class="footer__regular-holidays">
+                      日曜日、祝日、年末年始（12月31日から1月3日まで）
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="footer__pc-rightside">
+                <div class="footer__sitemap">
+                  <ui class="footer__sitemap-list footer__sitemap-row">
+                    <li class="footer__sitemap-item">
+                      <a href="#">トップページ</a>
+                    </li>
+                    <li class="footer__sitemap-item">
+                      <a href="about.html">私たちについて</a>
+                    </li>
+                    <li class="footer__sitemap-item">
+                      <a href="about.html#company">会社概要</a>
+                    </li>
+                  </ui>
+                  <ui class="footer__sitemap-list footer__sitemap-row">
+                    <li class="footer__sitemap-item">
+                      <a href="about.html#company">代表挨拶</a>
+                    </li>
+                    <li class="footer__sitemap-item">
+                      <a href="about.html#safety">安全への取り組み</a>
+                    </li>
+                    <li class="footer__sitemap-item">
+                      <a href="service.html">事業内容</a>
+                    </li>
+                    <li class="footer__sitemap-item">
+                      <a href="service.html#housing">住宅建築・リフォーム</a>
+                    </li>
+                  </ui>
+                  <ui class="footer__sitemap-list footer__sitemap-row">
+                    <li class="footer__sitemap-item">
+                      <a href="about.html#corporation">法人新築・リフォーム</a>
+                    </li>
+                    <li class="footer__sitemap-item">
+                      <a href="service.html#public-works">公共工事</a>
+                    </li>
+                    <li class="footer__sitemap-item">
+                      <a href="index.html#news">お知らせ</a>
+                    </li>
+                    <li class="footer__sitemap-item">
+                      <img
+                        class="mail-icon"
+                        src="images/common/mail-icon.svg"
+                        alt=""
+                      /><a href="contact.html">お問い合わせ</a>
+                    </li>
+                  </ui>
+                </div>
+              </div>
+            </div>
+            <div class="footer__copyright">&copy;AOBOTAN INC.</div>
+          </footer>
+        </footer>
+        <!-- footerここまで -->
+      </div>
+      <!-- wrap__mainここまで -->
+    </div>
+    <!--↑全体を囲んでいるwrapの閉じタグ-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/micromodal/dist/micromodal.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
