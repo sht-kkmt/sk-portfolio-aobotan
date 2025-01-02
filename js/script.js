@@ -152,6 +152,24 @@ const swiper = new Swiper(".swiper", {
 /*-----------------------------------
 MicroModal
 -----------------------------------*/
+$(function () {
+  MicroModal.init({
+    openClass: "is-open",
+    disableScroll: true, // MicroModalによる背景スクロール制御
+    onShow: (modal) => {
+      $("body").addClass("modal-open");
+
+      // モーダルコンテンツを確実にリセット
+      setTimeout(() => {
+        $(modal).find(".modal__container").scrollTop(0);
+      }, 0); // タイミングを調整
+    },
+    onClose: () => $("body").removeClass("modal-open"),
+  });
+
+  $(".open-modal-btn").on("click", () => MicroModal.show("myModal"));
+  $(".close-modal-btn").on("click", () => MicroModal.close("myModal"));
+});
 
 /*
   MicroModalとjQueryを組み合わせて以下を実現するコード：
@@ -160,20 +178,20 @@ MicroModal
   3. モーダルを開いたとき、コンテンツのトップが表示されるように設定。
 */
 
-$(function () {
-  MicroModal.init({
-    openClass: "is-open",
-    disableScroll: true, // MicroModalによる背景スクロール制御
-    onShow: (modal) => {
-      $("body").addClass("modal-open");
-      $(modal).find(".modal__container").scrollTop(0);
-    },
-    onClose: () => $("body").removeClass("modal-open"),
-  });
+// $(function () {
+//   MicroModal.init({
+//     openClass: "is-open",
+//     disableScroll: true, // MicroModalによる背景スクロール制御
+//     onShow: (modal) => {
+//       $("body").addClass("modal-open");
+//       $(modal).find(".modal__container").scrollTop(0);
+//     },
+//     onClose: () => $("body").removeClass("modal-open"),
+//   });
 
-  $(".open-modal-btn").on("click", () => MicroModal.show("myModal"));
-  $(".close-modal-btn").on("click", () => MicroModal.close("myModal"));
-});
+//   $(".open-modal-btn").on("click", () => MicroModal.show("myModal"));
+//   $(".close-modal-btn").on("click", () => MicroModal.close("myModal"));
+// });
 
 /*-----------------------------------
 送信完了ページに遷移
