@@ -23,9 +23,9 @@ body {
 
 .body-no-scroll {
   overflow: hidden;
-  height: 100vh; /* ビューポートの高さを固定 */
+  height: 100vh;
   position: fixed; /* ページ全体を固定 */
-  width: 100%; /* 横スクロールも防止 */
+  width: 100%;
 }
 
 img {

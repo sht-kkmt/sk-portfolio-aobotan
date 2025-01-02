@@ -1,33 +1,181 @@
 /*-----------------------------------
 初回のみローディング
 -----------------------------------*/
+$(function () {
+  // スクロール制御: 無効化
+  const disableScroll = () => {
+    $("body").css({
+      overflow: "hidden",
+      position: "fixed",
+      width: "100%",
+      height: "100%",
+    });
+  };
+
+  // スクロール制御: 有効化
+  const enableScroll = () => {
+    $("body").css({
+      overflow: "",
+      position: "",
+      width: "",
+      height: "",
+    });
+  };
+
+  // ローディング処理
+  const handleLoading = () => {
+    const isFirstAccess = !sessionStorage.getItem("access");
+
+    if (isFirstAccess) {
+      // 初回アクセス時: ローディングを表示し、スクロールを無効化
+      sessionStorage.setItem("access", "true");
+      $(".loading-animation").addClass("is-active");
+      disableScroll();
+
+      setTimeout(() => {
+        // ローディング終了後に非表示
+        $(".loading").addClass("is-active");
+        $(".loading-animation").removeClass("is-active");
+        enableScroll();
+      }, 3000); // ローディング表示時間
+    } else {
+      // 2回目以降アクセス時: ローディング画面を即座に非表示
+      $(".loading").addClass("is-active");
+      $(".loading-animation").removeClass("is-active");
+      enableScroll();
+    }
+  };
+
+  handleLoading();
+});
+
+// $(function () {
+//   // スクロール制御: 無効化
+//   const disableScroll = () => {
+//     $("body").css({
+//       overflow: "hidden",
+//       position: "fixed",
+//       width: "100%",
+//       height: "100%",
+//     });
+//   };
+
+//   // スクロール制御: 有効化
+//   const enableScroll = () => {
+//     $("body").css({
+//       overflow: "",
+//       position: "",
+//       width: "",
+//       height: "",
+//     });
+//   };
+
+//   // ローディング処理
+//   const handleLoading = () => {
+//     const isFirstAccess = !sessionStorage.getItem("access");
+
+//     // ローディング画面を即時表示
+//     $(".loading").removeClass("is-active");
+//     $(".loading-animation").addClass("is-active");
+//     disableScroll();
+
+//     if (isFirstAccess) {
+//       // 初回アクセス時: ローディングを表示し、スクロールを無効化
+//       sessionStorage.setItem("access", "true");
+
+//       setTimeout(() => {
+//         // ローディング終了後にスクロールを有効化
+//         $(".loading").addClass("is-active");
+//         $(".loading-animation").removeClass("is-active");
+//         enableScroll();
+//       }, 3000); // ローディング表示時間
+//     } else {
+//       // 2回目以降アクセス時: ローディングをスキップ
+//       setTimeout(() => {
+//         $(".loading").addClass("is-active");
+//         enableScroll();
+//       }, 500); // 短時間だけローディング表示
+//     }
+//   };
+
+//   // ローディング処理を実行
+//   handleLoading();
+// });
+
+// $(function () {
+//   // スクロール制御: 無効化
+//   const disableScroll = () => {
+//     $("body").css({
+//       overflow: "hidden",
+//       position: "fixed",
+//       width: "100%",
+//       height: "100%",
+//     });
+//   };
+
+//   // スクロール制御: 有効化
+//   const enableScroll = () => {
+//     $("body").css({
+//       overflow: "",
+//       position: "",
+//       width: "",
+//       height: "",
+//     });
+//   };
+
+//   // ローディング処理
+//   const handleLoading = () => {
+//     const isFirstAccess = !sessionStorage.getItem("access");
+
+//     if (isFirstAccess) {
+//       // 初回アクセス時: ローディングを表示し、スクロールを無効化
+//       sessionStorage.setItem("access", "true");
+//       $(".loading-animation").addClass("is-active");
+//       disableScroll();
+
+//       setTimeout(() => {
+//         $(".loading").addClass("is-active");
+//         $(".loading-animation").removeClass("is-active");
+//         enableScroll();
+//       }, 3000); // ローディング表示時間
+//     } else {
+//       // 2回目以降アクセス時: ローディングをスキップ
+//       $(".loading").addClass("is-active");
+//       enableScroll();
+//     }
+//   };
+
+//   // ローディング処理を実行
+//   handleLoading();
+// });
+
 /*
   このスクリプトは、初回アクセス時にローディングアニメーションを表示し、3秒後に非表示にします。
   2回目以降のアクセス時には、ローディングアニメーションをスキップして、通常画面を表示します。
   sessionStorageを使用して、ユーザーが初回アクセスかどうかを判断します。
 */
-$(function () {
-  var webStorage = function () {
-    if (sessionStorage.getItem("access")) {
-      /*
-        2回目以降アクセス時の処理
-      */
-      $(".loading").addClass("is-active");
-    } else {
-      /*
-        初回アクセス時の処理
-      */
-      sessionStorage.setItem("access", "true"); // sessionStorageにデータを保存
-      $(".loading-animation").addClass("is-active"); // loadingアニメーションを表示
-      setTimeout(function () {
-        // ローディングを数秒後に非表示にする
-        $(".loading").addClass("is-active");
-        $(".loading-animation").removeClass("is-active");
-      }, 3000); // ローディングを表示する時間
-    }
-  };
-  webStorage();
-});
+// $(function () {
+//   var webStorage = function () {
+//     if (sessionStorage.getItem("access")) {
+//       /*
+//         2回目以降アクセス時の処理
+//       */
+//       $(".loading").addClass("is-active");
+//     } else {
+//       /*
+//         初回アクセス時の処理
+//       */
+//       sessionStorage.setItem("access", "true"); // sessionStorageにデータを保存
+//       $(".loading-animation").addClass("is-active"); // loadingアニメーションを表示
+//       setTimeout(function () {
+//         // ローディングを数秒後に非表示にする
+//         $(".loading").addClass("is-active");
+//         $(".loading-animation").removeClass("is-active");
+//       }, 3000); // ローディングを表示する時間
+//     }
+//   };
+//   webStorage();
+// });
 
 /*-----------------------------------
 SPハンバーガーメニュー
@@ -152,6 +300,13 @@ const swiper = new Swiper(".swiper", {
 /*-----------------------------------
 MicroModal
 -----------------------------------*/
+/*
+  MicroModalとjQueryを組み合わせて以下を実現するコード：
+  1. モーダルを開いた際に背景を固定するため、bodyに`modal-open`クラスを追加。
+  2. モーダルを閉じた際に`modal-open`クラスを削除し、背景のスクロールを再有効化。
+  3. モーダルを開いたとき、コンテンツのトップが表示されるように設定。
+*/
+
 $(function () {
   MicroModal.init({
     openClass: "is-open",
@@ -170,28 +325,6 @@ $(function () {
   $(".open-modal-btn").on("click", () => MicroModal.show("myModal"));
   $(".close-modal-btn").on("click", () => MicroModal.close("myModal"));
 });
-
-/*
-  MicroModalとjQueryを組み合わせて以下を実現するコード：
-  1. モーダルを開いた際に背景を固定するため、bodyに`modal-open`クラスを追加。
-  2. モーダルを閉じた際に`modal-open`クラスを削除し、背景のスクロールを再有効化。
-  3. モーダルを開いたとき、コンテンツのトップが表示されるように設定。
-*/
-
-// $(function () {
-//   MicroModal.init({
-//     openClass: "is-open",
-//     disableScroll: true, // MicroModalによる背景スクロール制御
-//     onShow: (modal) => {
-//       $("body").addClass("modal-open");
-//       $(modal).find(".modal__container").scrollTop(0);
-//     },
-//     onClose: () => $("body").removeClass("modal-open"),
-//   });
-
-//   $(".open-modal-btn").on("click", () => MicroModal.show("myModal"));
-//   $(".close-modal-btn").on("click", () => MicroModal.close("myModal"));
-// });
 
 /*-----------------------------------
 送信完了ページに遷移
